@@ -1,0 +1,32 @@
+#!/bin/bash
+
+echo "Enter the size"
+read size
+echo "Enter the numbers"
+
+for((i=0;i<size;i++))
+do
+   read nums[$i]
+done
+
+for((i=0;i<size;i++))
+do
+  for((j=i+1;j<size;j++))
+do
+   if [ ${nums[$i]} -lt ${nums[$j]} ]; then
+	temp=${nums[$i]}
+	nums[$i]=${nums[j]}
+	nums[$j]=$temp
+    fi
+   done
+done
+
+echo"Array Sorted"
+for((i=0;i<size;i++))
+do
+echo ${nums[i]}
+done
+echo "Done"
+
+
+echo $n3

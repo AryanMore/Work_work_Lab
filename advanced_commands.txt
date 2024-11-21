@@ -1,0 +1,5 @@
+awk '{print $1}' file.txt
+tar -cvf my_archive.tar my_files/
+df -h
+find /home/user/ -type f -name "*.txt"
+history | grep "tar"
